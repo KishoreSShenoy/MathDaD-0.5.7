@@ -35,13 +35,13 @@ GhostMailer.prototype.from = function () {
     // If we don't have a from address at all
     if (!from) {
         // Default to ghost@[blog.url]
-        from = 'ghost@' + this.getDomain();
+        from = 'admin@' + this.getDomain();
     }
 
     // If we do have a from address, and it's just an email
     if (validator.isEmail(from)) {
         if (!config.theme.title) {
-            config.theme.title = 'Ghost at ' + this.getDomain();
+            config.theme.title = 'Kishore  S Shenoy at ' + this.getDomain();
         }
         from = config.theme.title + ' <' + from + '>';
     }
